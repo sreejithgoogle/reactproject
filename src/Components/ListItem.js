@@ -11,6 +11,8 @@ class ListItem extends Component {
         this.props.onDelete(id);
     }
 
+    /* deleteProject function to pass that id to onDelete that call in Home.js */
+
     render() {
         return (
                 <li className="ListData">
@@ -21,6 +23,9 @@ class ListItem extends Component {
 
         );
     }
+
+    /* In link through 5 values pass to userinfo. param1:id , param2:name, param3:group, param4:age, param5:gender */
+    /* In delete link click pass id only */
 }
 
 export default ListItem;

@@ -15,7 +15,7 @@ class Adddata extends Component {
         let fields = this.state.fields;
         let errors = {};
         let formIsValid = true;
-        //Name
+
         if(!fields["name"]){
             formIsValid = false;
             errors["name"] = "Cannot be empty";
@@ -44,9 +44,13 @@ class Adddata extends Component {
         return formIsValid;
     }
 
+    /* handleValidation use for the validate the values enter in the input field */
+
     static defaultProps = {
         groups: ['Group1', 'Group2', 'group3']
     }
+
+    /* defaultProps load the drop down values */
 
     change(e){
         this.setState({
@@ -64,11 +68,13 @@ class Adddata extends Component {
                 age: this.refs.age.value,
                 gender: this.refs.gender.value
             }}, function(){
-                //console.log(this.state);
                 this.props.addProject(this.state.newProject);
             });
         }
     }
+
+    /* when i click submit button values pass into handleSubmit, then pass these values to handleValidation after the validation success. values
+        pass into addProject that linked to Home.js (handleAddProject) */
 
     handleChange(field, e){
         let fields = this.state.fields;
@@ -87,7 +93,7 @@ class Adddata extends Component {
                     <div>
                         <label>Name</label><br />
                         <input type="text" ref="name" onChange={this.handleChange.bind(this, "name")} value={this.state.fields["name"]} /><br />
-                        <span style={{color: "red"}}>{this.state.errors["name"]}</span>
+                        <span style={{color: "red"}}>{this.state.errors["name"]}</span> /* This show the error messages */
                         <br />
                         <label>Group</label><br />
                         <select ref="group">
@@ -95,7 +101,7 @@ class Adddata extends Component {
                         </select><br />
                         <label>Age</label><br />
                         <input type="text" ref="age" onChange={this.handleChange.bind(this, "age")} value={this.state.fields["age"]} /><br />
-                        <span style={{color: "red"}}>{this.state.errors["age"]}</span><br />
+                        <span style={{color: "red"}}>{this.state.errors["age"]}</span><br /> /* This show the error messages */
                         <input type="radio" name="gender" ref="gender" value="male" defaultChecked="defaultChecked" onChange={this.change.bind(this)} /><label>Male</label>
                         <input type="radio" name="gender" ref="gender" value="female" onChange={this.change.bind(this)} /><label>Female</label><br />
                         <input type="submit" value="Submit" />

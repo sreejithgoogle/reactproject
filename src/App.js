@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import uuid from 'uuid';
-import Sidebars from './Components/Sidebars';
-import Home from './Components/Home';
-import UserInfo from './Components/UserInfo';
+import uuid from 'uuid';                    /* call uuid from node_modules */
+import Sidebars from './Components/Sidebars';  /* calling Sidebar Component */
+import Home from './Components/Home';           /* calling Home Component */
+import UserInfo from './Components/UserInfo';   /* calling UserInfo Component */
 import {
     BrowserRouter as Router,
     Route,
     Link
 } from 'react-router-dom';
-import './App.css';
+import './App.css';                            /* calling Css file */
 
 class App extends Component {
 

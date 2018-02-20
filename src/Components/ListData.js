@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ListItem from './ListItem';
+import ListItem from './ListItem';   /* This help to import ListItem component */
 
 class ListData extends Component {
 
@@ -7,21 +7,24 @@ class ListData extends Component {
         this.props.onDelete(id);
     }
 
+    /* deleteProject function to pass that id to onDelete that call in Home.js */
+
     render() {
         let listItems;
         if(this.props.projects){
             listItems = this.props.projects.map(project => {
-                //console.log(project);
                 return(
                     <ListItem onDelete={this.deleteProject.bind(this)} key={project.title} project={project} />
                 );
             });
         }
 
+        /* Above listItems value that from Listitem */
+
         return (
             <div className="ListData">
                 <h3>List Data</h3>
-                {listItems}
+                {listItems}    /* Listing the values */
             </div>
         );
     }
