@@ -22,7 +22,7 @@ class ListData extends Component {
         return (
             <div className="ListData">
                 <h3>List Data</h3>
-                {listItems}    <!-- Listing the values -->
+                {listItems}    {/* Listing the values */}
             </div>
         );
     }

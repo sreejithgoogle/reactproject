@@ -61,8 +61,8 @@ class Home extends Component {
     render() {
         return (
             <div className="Home">
-                    <Adddata addProject={this.handleAddProject.bind(this)}/>  <!-- This shows the Adddata component -->
-                    <ListData projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)} />  <!-- This shows the listdata component -->
+                    <Adddata addProject={this.handleAddProject.bind(this)}/>  {/* This shows the Adddata component */}
+                    <ListData projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)} />  {/* This shows the listdata component */}
             </div>
         );
     }
