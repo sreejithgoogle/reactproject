@@ -19,12 +19,10 @@ class ListData extends Component {
             });
         }
 
-        /* Above listItems value that from Listitem */
-
         return (
             <div className="ListData">
                 <h3>List Data</h3>
-                {listItems}    /* Listing the values */
+                {listItems}    <!-- Listing the values -->
             </div>
         );
     }

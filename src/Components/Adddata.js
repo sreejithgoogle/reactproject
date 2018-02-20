@@ -93,7 +93,7 @@ class Adddata extends Component {
                     <div>
                         <label>Name</label><br />
                         <input type="text" ref="name" onChange={this.handleChange.bind(this, "name")} value={this.state.fields["name"]} /><br />
-                        <span style={{color: "red"}}>{this.state.errors["name"]}</span> /* This show the error messages */
+                        <span style={{color: "red"}}>{this.state.errors["name"]}</span> <!-- This show the error messages -->
                         <br />
                         <label>Group</label><br />
                         <select ref="group">
@@ -101,7 +101,7 @@ class Adddata extends Component {
                         </select><br />
                         <label>Age</label><br />
                         <input type="text" ref="age" onChange={this.handleChange.bind(this, "age")} value={this.state.fields["age"]} /><br />
-                        <span style={{color: "red"}}>{this.state.errors["age"]}</span><br /> /* This show the error messages */
+                        <span style={{color: "red"}}>{this.state.errors["age"]}</span><br /> <!-- This show the error messages -->
                         <input type="radio" name="gender" ref="gender" value="male" defaultChecked="defaultChecked" onChange={this.change.bind(this)} /><label>Male</label>
                         <input type="radio" name="gender" ref="gender" value="female" onChange={this.change.bind(this)} /><label>Female</label><br />
                         <input type="submit" value="Submit" />
